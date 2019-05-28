@@ -43,5 +43,12 @@ anything between (any text)
 ### grep --color -E ".com" readme.md
 you do not need to escape anything in regex
 
+### grep --color "^something" app.md
+searches beginning of the line
 
+### find dirname -name "*.php" | grep -v "node_modules"
+removes node_modules results from the list
+
+### find dirname -name "*.php" | grep -vE "node_modules|spec"
+removes node_modules or spec results from the list
 
