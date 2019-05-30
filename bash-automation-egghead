@@ -1,0 +1,28 @@
+### Create new alias
+cd ~ # go to home directory
+stat .bash_profile # check if file exists
+alias ll="ls -la" # create an alias
+source .bash_profile # to let system know of the changes in your file
+type ll # will tell you what command you set the alias to
+
+### add your folder to path
+cd ~
+vim .bash_profile
+export PATH="$PATH:~/my-scripts" # append to the path
+echo $PATH # will now contain my-scripts
+
+### brace expansion in bash
+mkdir -p packages/{pkg1,pkg2,pkg3}/src # creates packages/pkg1/src, packages/pkg2/src, packages/pkg3/src
+tree #shows the folder tree
+touch test-{1..10} # will create 10 test files [test-1, test-2, test-3 and so on]
+
+### history command bash
+!! runs previous command
+!$ gets the parameter from the previous command
+
+### bash keyboard shortcuts
+ctrl a - beginning of the line
+ctrl e - end of the line
+ctrl k - clear the line from the cursor
+ctrl w - to delete the last word
+ctrl l - clear the screen
