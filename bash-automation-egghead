@@ -26,3 +26,12 @@ ctrl e - end of the line
 ctrl k - clear the line from the cursor
 ctrl w - to delete the last word
 ctrl l - clear the screen
+
+### Read and Use JSON in Bash with jq
+echo '{"foo": 123}' | jq '.foo' # gives 123
+curl http://somejsonurl.org  | jq # puts json url
+
+### Understand how to Redirect stdin, stdout, and stderr in Bash
+ls -la /dev/ | grep 'std.*' [stderr -> fd/2, stdin -> fd/0, stdout -> fd/1] default is stdout
+ls noexist 2> err.txt #throw only errors to err.txt
+ls noexist > err.txt 2>&1 #log error and normal output to err.txt
